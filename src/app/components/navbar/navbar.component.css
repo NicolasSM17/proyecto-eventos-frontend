@@ -1,0 +1,152 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #0a0a0a;
+    width: 100%;
+    padding: 10px 0; /* Espacio superior e inferior */
+}
+
+header .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limitar el ancho del contenedor principal */
+    padding: 0 20px; /* Espacio a los lados */
+}
+
+header .logo {
+    flex: 1;
+}
+
+header .logo img {
+    height: 40px; /* Ajustar según tu logo */
+}
+
+header .search-container.expanded-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2;
+    margin-top: 20px;
+}
+
+header .search-container.expanded-search .search-bar {
+    position: relative;
+    width: 80%; /* Ajusta el ancho del input */
+    margin: 0 auto; /* Centra la barra de búsqueda */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+header .search-container.expanded-search .search-bar input {
+    width: 100%;
+    padding: 10px 40px 10px 20px; /* Ajustar el relleno para dejar espacio para el ícono */
+    border-radius: 25px; /* Bordes redondeados */
+    color: white;
+    background-color: #0e0d0d; /* Fondo claro */
+    font-size: 16px; /* Tamaño de fuente más grande */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+
+header .search-container.expanded-search .search-bar input:focus,
+header .search-container.expanded-search .search-bar input:not(:placeholder-shown){
+    border-color: #faf5f5; /* Color de borde al enfocar */
+    background-color: #f7f7f7; /* Color de fondo al enfocar */
+    color: #181717; /* Color del texto al enfocar */
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3); /* Sombra azul suave */
+    outline: none; /* Eliminar el borde de enfoque predeterminado */
+}
+
+
+header .search-container.expanded-search .search-bar input:hover {
+    background-color: #f7f7f7; /* Color de fondo al pasar el cursor */
+    color: #181717; /* Color del texto al pasar el cursor */
+    border-color: #e6f7ff; /* Color del borde al pasar el cursor */
+}
+
+
+header .search-bar input::placeholder {
+    color: #bbb; /* Color del texto del marcador de posición */
+    font-style: italic; /* Estilo cursiva */
+}
+
+header .search-bar .search-icon {
+    position: absolute;
+    right: 20px; /* Posición del ícono a la derecha */
+    top: 50%;
+    transform: translateY(-50%); /* Centrar verticalmente */
+    font-size: 1.2rem;
+    color: #bbb;
+    pointer-events: none; /* Hacer el ícono no clicable */
+}
+
+
+header .icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header .icons .filter-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header .icons .filter-button:hover,
+header .icons .filter-button:focus {
+    color: #f0e68c; /* Cambia a platino u otro color que prefieras */
+    transform: scale(1.1);
+}
+
+header .icons .filter-button i {
+    font-size: 1.5rem;
+}
+
+header .icons .filter-button span {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+header .buttons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    margin-top: -50px; /* Ajusta el margen superior */
+}
+
+header .buttons .btn {
+    margin-left: 10px;
+    font-family: 'Kanit', Arial, sans-serif;
+    background-color: #221f1f;
+    color: rgb(255, 253, 253);
+    border: 1px solid rgb(255, 253, 253);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header .btn:hover {
+    background-color: #4d555c;
+}
+
+.container {
+    margin-top: 50px;
+    position: relative; 
+}

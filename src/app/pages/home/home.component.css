@@ -1,0 +1,78 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    .container {
+        margin-top: 50px;
+        position: relative; 
+        animation: fadeIn 0.7s ease-out forwards; /* Ajusta la duración y el timing de la animación */
+        opacity: 0; /* Inicialmente oculto para la animación */
+    }
+
+    h1 {
+        font-size: 3em; 
+        margin-bottom: 60px; 
+        line-height: 1.5; 
+    }
+
+    .institutions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); /* Ajusta el número de columnas según el espacio disponible */
+        grid-column-gap: 60px;
+        grid-row-gap: 22px;
+        align-items: start;
+        justify-content: center; /* Centra los elementos horizontalmente */
+    }
+
+    .institution {
+        text-align: center;
+        padding: 15px 10px; /* Ajusta el relleno en lugar del margen */
+        margin: 0 10px; /* Ajusta el margen horizontal */
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        
+        transform-origin: center; /* Mantiene el centro del elemento como origen de la transformación */
+        background-color: #221f1f; /* Asegúrate de que el fondo coincida con el fondo de la página */
+    }
+
+
+
+
+    .institution img {
+        width: 80px; /* Ajusta el ancho del logo */
+        height: 80px; /* Ajusta la altura del logo */
+        display: block;
+        margin: 0 auto 10px; /* Centra la imagen y añade un margen inferior */
+        transition: transform 0.3s ease; /* Añade transición suave para la transformación */
+    }
+
+
+    .institution a {
+        text-decoration: none; /* Elimina el subrayado */
+        color: rgb(175, 167, 167); /* Cambia el color del texto a blanco */
+        transition: transform 0.3s ease; /* Añade transición suave para la transformación */
+    }
+
+    .institution p {
+        font-weight: bold; /* Hace que el texto de los párrafos esté en negrita */
+        transition: color 0.3s ease; /* Transición suave para el color del texto */
+    }
+
+
+    .institution a:hover {
+        transform: scale(1.1); /* Efecto de agrandamiento al pasar el cursor */
+    }
+    .institution a:hover p {
+        color: #f8f7f4; 
+    }
